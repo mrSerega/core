@@ -1,12 +1,18 @@
 #ifndef ROAD_H
 #define ROAD_H
 
-class Road 
+namespace NAMESPACE
+
 {
-public:
-    Road();
-    Road(const Road& rhs);
-    ~Road();
-};
+
+    class Road
+    {
+    public:
+        Road();
+        Road(const Road& rhs);
+        ~Road();
+    };
+
+}
 
 #endif 

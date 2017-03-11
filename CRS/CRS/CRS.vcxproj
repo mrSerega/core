@@ -139,9 +139,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
+    <ClInclude Include="core.h" />
     <ClInclude Include="crs.h" />
+    <ClInclude Include="globaldefine.h" />
     <ClInclude Include="IModule.h" />
     <ClInclude Include="Road.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

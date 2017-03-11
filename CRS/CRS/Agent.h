@@ -1,3 +1,5 @@
+﻿#include "globaldefine.h"
+
 #include "IModule.h"
 
 #include <vector>
@@ -5,19 +7,32 @@
 #ifndef AGENT_H
 #define AGENT_H
 
-class Agent
+using namespace NAMESPACE;
+
+namespace NAMESPACE
 {
-public:
-    Agent();
-    Agent(const Agent& rhs);
-    ~Agent();
 
-    unsigned int get_id() const;
-private:
-    static unsigned int _last_id;//TODO: init it in .cpp
+	/*!
+		\brief объект отождествляющий собой участника движения(автомобиль)
+	*/
+    class Agent
+    {
+    public:
+        Agent();
+        Agent(const Agent& rhs);
+        ~Agent();
 
-    unsigned int _id;
-    std::vector<Agent*> _neighbors;
-};
+        unsigned int get_id() const;
+		double get_speed();//todo 
+    private:
+        static unsigned int _last_id;//TODO: init it in .cpp хранит последний уникальный id выданный новому экземпляру агента
+
+		double _speed;
+
+        unsigned int _id;
+        std::vector<Agent*> _neighbors;
+    };
+
+}
 
 #endif
